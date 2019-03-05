@@ -9,6 +9,15 @@ import kart.model.Volta;
 
 public class CorridaImpl implements Corrida {
 	
+	public boolean pilotoCorrendo(ArrayList<Volta> chegada, Volta piloto) {
+		for(int i=0; i < chegada.size(); i++) {
+			if(chegada.get(i).getCodPiloto().equals(piloto.getCodPiloto())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public ArrayList<Volta> pegarUltimaVolta(ArrayList<Volta> corrida){
 		ArrayList<Volta> ultimasVolta = new ArrayList<Volta>();
 		for(int i=0; i<corrida.size(); i++) {

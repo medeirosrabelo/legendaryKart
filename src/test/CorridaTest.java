@@ -26,6 +26,15 @@ class CorridaTest {
 		LerArquivo lerArquivo = new LerArquivoImpl();
 		corrida = lerArquivo.lerArquivoCorrida(pathFile);
 	}
+	
+	@Test
+	void testaPilotoCorrendo() {
+		Volta piloto = new Volta();
+		piloto.setCodPiloto("038");
+		boolean result = objCorrida.pilotoCorrendo(this.corrida, piloto);
+		assertEquals(true, result);
+	}
+
 
 	@Test
 	void testaPegarUltimaVolta() {
