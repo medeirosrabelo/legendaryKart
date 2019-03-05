@@ -118,4 +118,25 @@ class CorridaTest {
 		assertEquals(primVolta.get(0).getCodPiloto(), primVoltaResult.get(0).getCodPiloto());
 	}
 	
+	@Test
+	void testaPegarTempoCorrida() {
+		ArrayList<Volta> primeiraVolta = new ArrayList<Volta>();
+		ArrayList<Volta> ultimaVolta = new ArrayList<Volta>();
+		primeiraVolta = objCorrida.pegarPrimeiraVolta(corrida);
+		primeiraVolta.sort(new Comparator<Volta>() {
+			@Override
+		    public int compare(Volta v1, Volta v2) {
+		        return DateTimeComparator.getInstance().compare(v1.getHorario(), v2.getHorario());
+			}
+		});
+		ultimaVolta = objCorrida.pegarUltimaVolta(corrida);
+		ultimaVolta.sort(new Comparator<Volta>() {
+			@Override
+		    public int compare(Volta v1, Volta v2) {
+		        return DateTimeComparator.getInstance().compare(v1.getHorario(), v2.getHorario());
+			}
+		});
+		String tempoTotal = objCorrida.pegarTempoCorrida(primeiraVolta.get(0), ultimaVolta.get(0));
+		assertEquals("00:04:11.578", tempoTotal);
+	}
 }

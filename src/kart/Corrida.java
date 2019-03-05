@@ -12,4 +12,6 @@ public interface Corrida {
 	public ArrayList<Volta> pegarUltimaVolta(ArrayList<Volta> corrida);
 	
 	public ArrayList<Volta> pegarPrimeiraVolta(ArrayList<Volta> corrida);
+	
+	public String pegarTempoCorrida(Volta voltaLargada, Volta voltaChegada);
 }

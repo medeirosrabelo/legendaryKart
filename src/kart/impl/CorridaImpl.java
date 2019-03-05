@@ -56,4 +56,17 @@ public class CorridaImpl implements Corrida {
 		return firstRound;
 	}
 	
+	public String pegarTempoCorrida(Volta voltaLargada, Volta voltaChegada) {
+		DateTime largada = voltaLargada.getHorario().minusMinutes(Integer.parseInt(
+				voltaLargada.getTempoTotal().toString().substring(14, 16)))
+				.minusSeconds(Integer.parseInt(voltaLargada.getTempoTotal().toString().substring(17, 19)))
+				.minusMillis(Integer.parseInt(voltaLargada.getTempoTotal().toString().substring(20, 23)));
+
+		String tempoTotal = voltaChegada.getHorario().minusHours(Integer.parseInt(largada.toString().substring(11, 13)))
+				.minusMinutes(Integer.parseInt(largada.toString().substring(14, 16)))
+				.minusSeconds(Integer.parseInt(largada.toString().substring(17, 19)))
+				.minusMillis(Integer.parseInt(largada.toString().substring(20, 23))).toString().substring(11, 23);
+		return tempoTotal;
+	}
+	
 }
