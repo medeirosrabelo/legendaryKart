@@ -18,7 +18,7 @@ public class LerArquivoImpl implements LerArquivo {
 	
 	public ArrayList<Volta> lerArquivoCorrida(String arquivo) {
 		try {
-			BufferedReader buffRead = new BufferedReader(new FileReader("C:\\Users\\d.medeiros.rabelo\\eclipse-workspace\\GymKart\\src\\test\\kart.txt"));
+			BufferedReader buffRead = new BufferedReader(new FileReader(arquivo));
 			String linha;
 			DateTimeFormatter df = DateTimeFormat.forPattern("HH:mm:ss.SSS");
 			linha = buffRead.readLine();
