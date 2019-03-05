@@ -1,0 +1,16 @@
+Um projeto usando JAVA.
+
+Usei o Maven para baixar uma lib, única lib externa que usei, para trabalhar com horas.
+Usei o JUnit para fazer os testes.
+Utilizei o Eclipse como IDE.
+
+Não cheguei a fazer as funções opcionais por questão de conciliar trabalho, trabalho voluntário e o desafio, peço perdão por isso.
+
+O projeto é bem simples para rodar, basta importá-lo em uma IDE (Eclipse, NetBeans, IntelliJ) ou rodar por linha de comando se preferir e executá-lo.
+A aplicação pedirá um caminho do arquivo com as informações da corrida, é preciso informá-lo. 
+Ex.: C:\\Users\\d.medeiros.rabelo\\eclipse-workspace\\GymKart\\src\\test\\kart.txt
+Eu pressumir que é um arquivo posicional e que as "colunas" são separadas por vários espaços simples.
+
+E é isso, espero que gostem, mas se não gostarem peço, gentilmente, que informem o que preciso melhorar para ter sucesso em uma próxima.
+
+Desde já, grato!
