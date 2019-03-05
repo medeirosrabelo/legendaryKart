@@ -35,6 +35,14 @@ class CorridaTest {
 		assertEquals(true, result);
 	}
 
+	@Test
+	void testaVoltaMaiorQueAnterior() {
+		Volta piloto = new Volta();
+		piloto.setQtdVoltasCompl("5");
+		Volta pilotoResult = new Volta();
+		pilotoResult = objCorrida.voltaMaiorQueAnterior(this.corrida, piloto);
+		assertEquals(corrida.get(0), pilotoResult);
+	}
 
 	@Test
 	void testaPegarUltimaVolta() {

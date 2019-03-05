@@ -18,6 +18,15 @@ public class CorridaImpl implements Corrida {
 		return false;
 	}
 	
+	public Volta voltaMaiorQueAnterior(ArrayList<Volta> chegada, Volta piloto) {
+		for(int i=0; i < chegada.size(); i++) {
+			if(Integer.parseInt(chegada.get(i).getQtdVoltasCompl()) < Integer.parseInt(piloto.getQtdVoltasCompl())) {
+				return chegada.get(i);
+			}
+		}
+		return null;
+	}
+	
 	public ArrayList<Volta> pegarUltimaVolta(ArrayList<Volta> corrida){
 		ArrayList<Volta> ultimasVolta = new ArrayList<Volta>();
 		for(int i=0; i<corrida.size(); i++) {
